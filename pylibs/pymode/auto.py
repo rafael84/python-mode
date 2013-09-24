@@ -9,7 +9,7 @@ class Options():
     diff = False
     ignore = ''
     in_place = True
-    max_line_length = 79
+    max_line_length = 99
     pep8_passes = 100
     recursive = False
     select = ''

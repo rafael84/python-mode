@@ -368,7 +368,7 @@ def ini_format(stream, options, encoding):
         value = format_option_value(optdict, value)
         help = optdict.get('help')
         if help:
-            help = normalize_text(help, line_len=79, indent='# ')
+            help = normalize_text(help, line_len=99, indent='# ')
             print >> stream
             print >> stream, _encode(help, encoding)
         else:
@@ -387,14 +387,14 @@ def rest_format_section(stream, section, options, encoding=None, doc=None):
     if section:
         print >> stream, '%s\n%s' % (section, "'"*len(section))
     if doc:
-        print >> stream, _encode(normalize_text(doc, line_len=79, indent=''),
+        print >> stream, _encode(normalize_text(doc, line_len=99, indent=''),
                                  encoding)
         print >> stream
     for optname, optdict, value in options:
         help = optdict.get('help')
         print >> stream, ':%s:' % optname
         if help:
-            help = normalize_text(help, line_len=79, indent='  ')
+            help = normalize_text(help, line_len=99, indent='  ')
             print >> stream, _encode(help, encoding)
         if value:
             value = _encode(format_option_value(optdict, value), encoding)

@@ -2000,7 +2000,7 @@ def parse_args(args):
                            '(default: {0})'.format(DEFAULT_IGNORE))
     parser.add_option('--select', metavar='errors', default='',
                       help='fix only these errors/warnings (e.g. E4,W)')
-    parser.add_option('--max-line-length', metavar='n', default=79, type=int,
+    parser.add_option('--max-line-length', metavar='n', default=99, type=int,
                       help='set maximum allowed line length '
                            '(default: %default)')
     options, args = parser.parse_args(args)

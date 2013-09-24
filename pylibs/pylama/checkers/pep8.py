@@ -71,7 +71,7 @@ else:
                                   os.path.expanduser('~/.config'), 'pep8')
 PROJECT_CONFIG = ('setup.cfg', 'tox.ini', '.pep8')
 TESTSUITE_PATH = os.path.join(os.path.dirname(__file__), 'testsuite')
-MAX_LINE_LENGTH = 79
+MAX_LINE_LENGTH = 99
 REPORT_FORMAT = {
     'default': '%(path)s:%(row)d:%(col)d: %(code)s %(text)s',
     'pylint': '%(path)s:%(row)d: [%(code)s] %(text)s',
@@ -202,14 +202,7 @@ def missing_newline(physical_line):
 
 def maximum_line_length(physical_line, max_line_length):
     """
-    Limit all lines to a maximum of 79 characters.
-
-    There are still many devices around that are limited to 80 character
-    lines; plus, limiting windows to 80 characters makes it possible to have
-    several windows side-by-side.  The default wrapping on such devices looks
-    ugly.  Therefore, please limit all lines to a maximum of 79 characters.
-    For flowing long blocks of text (docstrings or comments), limiting the
-    length to 72 characters is recommended.
+    Limit all lines to a maximum of a certain number of characters.
 
     Reports error E501.
     """
