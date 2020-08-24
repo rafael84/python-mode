@@ -25,7 +25,7 @@ if pymode#Option('options')
         setlocal number
     endif
     setlocal nowrap
-    setlocal textwidth=79
+    setlocal textwidth=99
     setlocal commentstring=#%s
 endif
 
